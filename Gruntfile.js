@@ -549,7 +549,6 @@ module.exports = function (grunt) {
     'uglify',
     'usemin',
     'htmlmin',
-	'compass:dist',
 	'copy:styles',
 	'copy:dist',
 	'cordovacli:build_android',
