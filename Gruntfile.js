@@ -48,6 +48,7 @@ module.exports = function (grunt) {
 					  }
 				}
 	 },
+      
 	
 	//Creates cordova project and has various other phonegap options
 	cordovacli: {
@@ -61,7 +62,7 @@ module.exports = function (grunt) {
 				platforms: ['ios','android'],
 				plugins: ['device','dialogs'],
 				path: 'phonegap-template',
-				id: 'com.phonegaptemplate',
+				id: 'com.hybris.events.sapretail',
 				name: 'phonegap-template'
 			}
 		},
@@ -543,7 +544,6 @@ module.exports = function (grunt) {
     'useminPrepare',
     'autoprefixer',
     'concat',
-    'ngAnnotate',
     'cdnify',
     'cssmin',
     'uglify',
@@ -558,4 +558,5 @@ module.exports = function (grunt) {
   grunt.registerTask('runSonar',[
     'sonarRunner:analysis'
   ]);
+    
 };
