@@ -476,6 +476,17 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
+      },
+      continuous: 
+      {
+        configFile: 'test/karma.conf.js',
+        singleRun: true,
+        browsers: ['PhantomJS'],
+        reporters: ['dots', 'junit'],
+        junitReporter: {
+          outputFile:'test-results.xml'
+        }
+        
       }
     }
   });
@@ -506,7 +517,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma'
+    'karma:continuous'
   ]);
 
   grunt.registerTask('build', [
